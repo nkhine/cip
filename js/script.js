@@ -71,7 +71,7 @@ jQuery(document).ready(function($) {
 				
 				// Here's where we piece together the HTML
 				htmlString += '<li><a href="' + item.link + '" target="_blank">';
-				htmlString += '<img src="' + sourceSquare + '" alt="' + item.title + '" title="' + item.title + '"/bsi/>';
+				htmlString += '<img src="' + sourceSquare + '" alt="' + item.title + '" title="' + item.title + '"/>';
 				htmlString += '</a></li>';
 			}
 			// Increase our counter by 1
