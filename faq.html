@@ -16,16 +16,29 @@
 	<link rel="stylesheet" href="/css/style.css"><!-- CSS Styles -->
 	<link rel="stylesheet" href="/css/responsive.css"><!-- RESPONSIVE CSS Styles -->
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,700|Droid+Serif:400,400italic|Damion' rel='stylesheet' type='text/css'><!-- FONT-FACE KITS -->
+	<link rel="stylesheet" href="/css/vendor/jquery/jquery-ui-1.10.1.custom.min.css" />
 	
 	<script src="/js/vendor/modernizr-2.0.6.min.js"></script><!-- MODERNIZR JavaScript for IE -->
 	
 	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
 	<script>window.jQuery || document.write("<script src='/js/vendor/jquery-1.7.1.min.js'>\x3C/script>")</script><!-- local fall-back if google api down -->
+	<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+	<script>window.jQuery || document.write("<script src='/js/vendor/jquery-1.7.1.min.js'>\x3C/script>")</script><!-- local fall-back if google api down -->
 	<script src="/js/vendor/plugins.js"></script>
 	<script src="/js/script.js"></script>
 	<!-- end JavaScript-->
-
+  <script>
+    $(function() {
+      var icons = {
+        header: "ui-icon-circle-arrow-e",
+        activeHeader: "ui-icon-circle-arrow-s"
+      };
+      $( "#accordion" ).accordion({
+        icons: icons
+      });
+    });
+    </script>
 </head>
 
 <body>
@@ -101,35 +114,45 @@
 		
 		<div id="container">
 			<div id="content" class="container">	
-				<h1 class="fancy aligncenter"><span class="fancy-dot"></span>TITLE<span class="fancy-dot"></span></h1>
-				Question 1 Why is my web page not loading?
-
-				…make sure you are connected to the internet?
-				…make sure you allow firewall to enable webpage to load up
-
-				Question 2 The video on the home page is not playing?
-				…have you updated your flash player http://get.adobe.com/flashplayer/
-
-				Question 3 I can’t find the downloadable maps after I download them.
-				..have you check your download folder
-
-				Question 4 How do I adjust the zoom?
-				…At the top of the webpage click the add and minuses button to adjust size of the text.
-
-				Question 5 How do I report a problem?
-				….in the left hand side of the webpage there is a contact us section where you can leave any comments and queries you may have.
-
-				Question 6 How do I contact the BSI Building directly?
-				…below is the relevant contact information for the BSI building
-				389 Chiswick High Road
-
-				London
-
-				W4 4AL
-
-				United Kingdom
-
-				Fax: +44 20 8996 7001 Email : cservices@bsigroup.com
+				<h1 class="fancy aligncenter"><span class="fancy-dot"></span>FAQ's<span class="fancy-dot"></span></h1>
+				<div id="accordion">
+          <h3>Why is my web page not loading?</h3>
+          <div>
+            <p>…make sure you are connected to the internet?</p>
+            <p>…make sure you allow firewall to enable webpage to load up</p>
+          </div>
+          <h3>The video on the home page is not playing?</h3>
+          <div>
+            <p>…have you updated your flash player <a href="http://get.adobe.com/flashplayer/">http://get.adobe.com/flashplayer/</a></p>
+          </div>
+          <h3>I can’t find the downloadable maps after I download them.</h3>
+          <div>
+            <p>..have you check your download folder</p>
+            <ul>
+              <li>List item one</li>
+              <li>List item two</li>
+              <li>List item three</li>
+            </ul>
+          </div>
+          <h3>How do I adjust the zoom?</h3>
+          <div>
+            <p>…At the top of the webpage click the add and minuses button to adjust size of the text.</p>
+          </div>
+          <h3>How do I report a problem?</h3>
+          <div>
+            <p>….in the top navigation hand or bottom of the web pages there is a contact us link where you can find details on how to contaxt us or use the contact us forml.</p>
+          </div>
+          <h3>How do I contact the BSI Building directly?</h3>
+          <div>
+            <p>…below is the relevant contact information for the BSI building</p>
+            <p>389 Chiswick High Road<br />
+              London<br />
+              W4 4AL<br />
+              Fax: +44 20 8996 7001<br />
+              Email : <a href="mailto:cservices@bsigroup.com">cservices@bsigroup.com</a>
+            </p>
+          </div>
+        </div>
 				<div class="clearfix"></div><!-- fix div's from floating into containers below -->
 					
 			</div><!-- close #content -->
